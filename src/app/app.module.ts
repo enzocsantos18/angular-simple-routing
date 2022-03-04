@@ -8,6 +8,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { NumbersComponent } from './numbers/numbers.component';
+import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -16,7 +17,12 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, RouterModule.forRoot(routes)],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    CommonModule,
+    RouterModule.forRoot(routes),
+  ],
   declarations: [AppComponent, HelloComponent],
   bootstrap: [AppComponent],
 })
